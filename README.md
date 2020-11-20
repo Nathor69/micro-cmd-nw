@@ -1,2 +1,3 @@
-# micro-cmd-nw
-A tiny "cmd" for the NumWorks Python app
+# Micro "cmd" on NW
+A tiny "cmd" in the NumWorks Python app (on Omega)
+(just to test some function)
