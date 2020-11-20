@@ -5,7 +5,7 @@ from data import *
 isroot=False
 
 def boot():
-  print("\nuLinux 0.1.0\n")
+  print("\nCMD 0.0.1\n")
   login()
 
 def login():
