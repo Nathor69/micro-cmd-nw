@@ -39,25 +39,8 @@ def error(err):
   if err==1:
     print("Error: permission denied")
 
+#not working yet..
 def addlog():  
-  if isroot==False:
-    print("You are not connected as root")
-    error(1)
-  else:
-    nlog=input("new user: ")
-    npwd=input("new pswd: ")
-    alrexst=0
-    for i in range(len(logins)):
-      if logins[i][0]==nlog:
-        alrexst+=1
-    if alrexst>0:
-      print("\nThis account already exist")
-      print("Sorry dude\n")
-    else:
-      logins.append((nlog,npwd))
-      print("\nOK!\n")
-  
-def addlog2():  
   if isroot==False:
     print("You are not connected as root")
     error(1)
