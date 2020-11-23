@@ -32,7 +32,9 @@ def dir():
 def rdfl(fl):
   file=open(fl)
   file.seek(1)
+  print("###START OF "+fl+"###")
   print(file.read(1000000000))
+  print("####END OF "+fl+"####")
   file.close
   
 def error(err):
@@ -57,5 +59,6 @@ def addlog():
     else:
       loginsfile=open("data.py","w")
       loginsfile.seek(10)
+      print("NOT WORKING YET")
 
 boot()
