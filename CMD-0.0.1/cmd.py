@@ -59,6 +59,7 @@ def addlog():
     else:
       loginsfile=open("data.py","w")
       logins.append((nlog,npwd))
-      loginsfile.seek(2)
+      loginsfile.seek(9)
+      loginsfile.write(str(logins))
       
 boot()
