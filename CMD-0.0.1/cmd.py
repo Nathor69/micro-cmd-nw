@@ -58,7 +58,8 @@ def addlog():
       print("Sorry dude\n")
     else:
       loginsfile=open("data.py","w")
-      loginsfile.seek(10)
-      print("NOT WORKING YET")
+      logins.append((nlog,npwd))
+      loginsfile.seek(1)
+      
 
 boot()
