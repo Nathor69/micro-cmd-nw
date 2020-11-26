@@ -2,7 +2,7 @@ from math import *
 from os import *
 from data import *
 
-isroot=False
+isroot = False
 
 def boot():
   print("\nCMD 0.0.1\n")
@@ -14,6 +14,7 @@ def login():
   if logins.count((clog,cpwd))==1:
     print("")
     if clog=="root":
+      global isroot
       isroot=True
       print("You\'re connected as root")
     print("yay\n")
@@ -39,12 +40,11 @@ def rdfl(fl):
   
 def error(err):
   if err==1:
+    print("You are not connected as root")
     print("Error: permission denied")
 
-#not working yet..
 def addlog():  
   if isroot==False:
-    print("You are not connected as root")
     error(1)
   else:
     nlog=input("new user: ")
@@ -59,7 +59,6 @@ def addlog():
     else:
       loginsfile=open("data.py","w")
       logins.append((nlog,npwd))
-      loginsfile.seek(1)
+      loginsfile.seek(2)
       
-
 boot()
