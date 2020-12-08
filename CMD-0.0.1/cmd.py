@@ -68,5 +68,26 @@ def addlog():
       logins.append((nlog,npwd))
       loginsfile.write("logins="+str(logins))
       loginsfile.close()
+
+def remlog():
+  if isroot==False:
+    error(1)
+  else:
+    rlog=input("remove user: ")
+    alrexst=0
+    for i in logins:
+      if i[0]==rlog:
+        alrexst+=1
+    if alrexst==0:
+      print("\nThis account does not exist")
+      print("Sorry dude\n")
+    else:
+      loginsfile=open("data.py","w")
+      for i in logins:
+        if i[0]==rlog:
+          logins.remove(i)
+      loginsfile.truncate(0)
+      loginsfile.write("logins="+str(logins))
+      loginsfile.close()
       
 boot()
