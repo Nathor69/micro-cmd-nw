@@ -24,6 +24,8 @@ def login():
       global isroot
       isroot=True
       print("You\'re connected as root")
+    else:
+      isroot=False
     print("yay\n")
   else:
     print("\nThis account does not exist")
@@ -87,6 +89,7 @@ def remlog():
         if i[0]==rlog:
           logins.remove(i)
       loginsfile.truncate(0)
+      loginsfile.seek(1)
       loginsfile.write("logins="+str(logins))
       loginsfile.close()
       
