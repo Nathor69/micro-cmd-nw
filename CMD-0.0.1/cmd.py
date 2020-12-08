@@ -1,11 +1,18 @@
 from math import *
-from os import *
+import os
 from data import *
 
 isroot = False
 
 def boot():
-  print("\nCMD 0.0.1\n")
+  print("""\n
+   _____ __  __ _____     ___   ___  __ 
+  / ____|  \/  |  __ \   / _ \ / _ \/_ |
+ | |    | \  / | |  | | | | | | | | || |
+ | |    | |\/| | |  | | | | | | | | || |
+ | |____| |  | | |__| | | |_| | |_| || |
+  \_____|_|  |_|_____/   \___(_)___(_)_|
+  \n""")
   login()
 
 def login():
@@ -59,8 +66,7 @@ def addlog():
     else:
       loginsfile=open("data.py","w")
       logins.append((nlog,npwd))
-      loginsfile.seek(9)
-      loginsfile.write(str(logins))
+      loginsfile.write("logins="+str(logins))
       loginsfile.close()
       
 boot()
