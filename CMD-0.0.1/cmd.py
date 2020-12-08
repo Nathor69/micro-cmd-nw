@@ -26,7 +26,7 @@ def login():
 def dir():
   ldir=listdir()
   print("")
-  for i in range(len(listdir())):
+  for i in ldir:
     print(ldir[i])
   print("")
 
@@ -50,7 +50,7 @@ def addlog():
     nlog=input("new user: ")
     npwd=input("new pswd: ")
     alrexst=0
-    for i in range(len(logins)):
+    for i in logins:
       if logins[i][0]==nlog:
         alrexst+=1
     if alrexst>0:
