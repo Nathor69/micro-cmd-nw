@@ -34,16 +34,16 @@ def rdfl(fl):
   file=open(fl)
   file.seek(1)
   print("###START OF "+fl+"###")
-  print(file.read(1000000000))
+  print(file.read())
   print("####END OF "+fl+"####")
   file.close
-  
+
 def error(err):
   if err==1:
     print("You are not connected as root")
     print("Error: permission denied")
 
-def addlog():  
+def addlog():
   if isroot==False:
     error(1)
   else:
@@ -51,7 +51,7 @@ def addlog():
     npwd=input("new pswd: ")
     alrexst=0
     for i in logins:
-      if logins[i][0]==nlog:
+      if i[0]==nlog:
         alrexst+=1
     if alrexst>0:
       print("\nThis account already exist")
