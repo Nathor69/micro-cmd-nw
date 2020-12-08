@@ -27,7 +27,7 @@ def dir():
   ldir=listdir()
   print("")
   for i in ldir:
-    print(ldir[i])
+    print(i)
   print("")
 
 def rdfl(fl):
