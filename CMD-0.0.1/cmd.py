@@ -61,5 +61,6 @@ def addlog():
       logins.append((nlog,npwd))
       loginsfile.seek(9)
       loginsfile.write(str(logins))
+      loginsfile.close()
       
 boot()
