@@ -84,12 +84,15 @@ def remlog():
       print("\nThis account does not exist")
       print("Sorry dude\n")
     else:
+      conf=input("R u sure? (y/n)")
+      if conf!="y":
+        return
       loginsfile=open("data.py","w")
       for i in logins:
         if i[0]==rlog:
           logins.remove(i)
       loginsfile.truncate(0)
-      loginsfile.seek(1)
+      loginsfile.seek(0)
       loginsfile.write("logins="+str(logins))
       loginsfile.close()
       
