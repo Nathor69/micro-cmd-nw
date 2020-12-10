@@ -9,8 +9,8 @@ A tiny "cmd" in the NumWorks Python app (on [Omega](https://getomega.dev))
 | login()              | Login "menu"                      |
 | dir()                | Display filenames                 |
 | rdfl("filename")     | Read a file                       |
-| addlog()             | Add an user                       |
-| remlog()             | Remove an user                    |
+| addlog()             | Add a user                        |
+| remlog()             | Remove a user                     |
 | cls()                | Print some blank lines            |
 | error(int)           | Print an error                    |
 | others are coming... | (°u°)                             |
