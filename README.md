@@ -14,3 +14,5 @@ A tiny "cmd" in the NumWorks Python app (on [Omega](https://getomega.dev))
 | cls()                | Print some blank lines            |
 | error(int)           | Print an error                    |
 | others are coming... | (°u°)                             |
+  
+Please set your Python text size to small so the logo will print correctly
