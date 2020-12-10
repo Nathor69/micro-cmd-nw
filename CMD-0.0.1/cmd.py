@@ -66,10 +66,9 @@ def addlog():
       print("\nThis account already exist")
       print("Sorry dude\n")
     else:
-      loginsfile=open("data.py","w")
-      logins.append((nlog,npwd))
-      loginsfile.write("logins="+str(logins))
-      loginsfile.close()
+      with open("data.py","w") as loginsfile:
+        logins.append((nlog,npwd))
+        loginsfile.write("logins="+str(logins))
 
 def remlog():
   if isroot==False:
@@ -87,13 +86,12 @@ def remlog():
       conf=input("R u sure? (y/n)")
       if conf!="y":
         return
-      loginsfile=open("data.py","w")
-      for i in logins:
-        if i[0]==rlog:
-          logins.remove(i)
-      loginsfile.truncate(0)
-      loginsfile.seek(0)
-      loginsfile.write("logins="+str(logins))
-      loginsfile.close()
+      with open("data.py","w") as loginsfile:
+        for i in logins:
+          if i[0]==rlog:
+            logins.remove(i)
+        loginsfile.truncate(0)
+        loginsfile.seek(0)
+        loginsfile.write("logins="+str(logins))
       
 boot()
