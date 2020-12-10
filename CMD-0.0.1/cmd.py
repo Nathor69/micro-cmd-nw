@@ -72,6 +72,7 @@ def addlog():
     else:
       with open("data.py","w") as loginsfile:
         logins.append((nlog,npwd))
+        loginsfile.seek(1)
         loginsfile.write("logins="+str(logins))
 
 def remlog():
@@ -95,7 +96,7 @@ def remlog():
           if i[0]==rlog:
             logins.remove(i)
         loginsfile.truncate(0)
-        loginsfile.seek(0)
+        loginsfile.seek(1)
         loginsfile.write("logins="+str(logins))
-      
+
 boot()
