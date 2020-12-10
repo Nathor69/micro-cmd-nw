@@ -4,7 +4,11 @@ from data import *
 
 isroot = False
 
+def cls():
+  print("\n"*10)
+
 def boot():
+  cls()
   print("""\n
    _____ __  __ _____     ___   ___  __ 
   / ____|  \/  |  __ \   / _ \ / _ \/_ |
@@ -33,7 +37,7 @@ def login():
     login()
 
 def dir():
-  ldir=listdir()
+  ldir=os.listdir()
   print("")
   for i in ldir:
     print(i)
