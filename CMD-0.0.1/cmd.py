@@ -55,6 +55,8 @@ def error(err):
   if err==1:
     print("You are not connected as root")
     print("Error: permission denied")
+  if err==2:
+    print("Cannot remove root user")
 
 def addlog():
   if isroot==False:
@@ -80,6 +82,9 @@ def remlog():
     error(1)
   else:
     rlog=input("remove user: ")
+    if rlog=='root':
+      error(2)
+      return
     alrexst=0
     for i in logins:
       if i[0]==rlog:
