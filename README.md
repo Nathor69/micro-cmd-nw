@@ -2,6 +2,7 @@
 A tiny "cmd" in the NumWorks Python app (on [Omega](https://getomega.dev))  
 (just to test some function)  
 (not complete at all)  
+Ver 0.0.1  
   
 | Function             | What that does                    |
 |----------------------|-----------------------------------|
