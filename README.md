@@ -16,3 +16,5 @@ A tiny "cmd" in the NumWorks Python app (on [Omega](https://getomega.dev))
 | others are coming... | (°u°)                             |
   
 Please set your Python text size to small so the logo will print correctly
+  
+I would like to make a TUI next time, but that will be difficult 😣
