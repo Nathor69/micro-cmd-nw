@@ -136,6 +136,8 @@ def runapp(commandtext):
     command.error(3)
 
 command.boot()
+global exit
+exit=False
 while True:
   try:
     commandinput()
