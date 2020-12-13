@@ -20,10 +20,8 @@ class command:
 
   def dir():
     ldir=os.listdir()
-    print("")
     for i in ldir:
       print(i)
-    print("")
 
   def rdfl(fl):
     file=open(fl)
@@ -107,6 +105,7 @@ def login():
     login()
 
 def commandinput():
+  global cinput
   cinput=input("nw@"+str(clog)+":~$ ")
   cinput=cinput.split()
   runapp(cinput[0])
@@ -114,6 +113,14 @@ def commandinput():
 def runapp(commandtext):
   if commandtext=='dir':
     command.dir()
+  if commandtext=='addlog':
+    command.addlog()
+  if commandtext=='remlog':
+    command.remlog()
+  if commandtext=='rdfl':
+    command.rdfl(cinput[1])
+  if commandtext=='cls':
+    command.cls()
   else:
     command.error(3)
 

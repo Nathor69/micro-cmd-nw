@@ -3,6 +3,9 @@ import os
 from data import *
 
 isroot = False
+#Pycharm and NumWorks compatibility
+#0 is false, 1 is true
+numworks=0
 
 def cls():
   print("\n"*10)
@@ -74,6 +77,7 @@ def addlog():
     else:
       with open("data.py","w") as loginsfile:
         logins.append((nlog,npwd))
+        loginsfile.seek(numworks)
         loginsfile.write(" logins="+str(logins))
 
 def remlog():
@@ -100,6 +104,7 @@ def remlog():
           if i[0]==rlog:
             logins.remove(i)
         loginsfile.truncate(0)
+        loginsfile.seek(numworks)
         loginsfile.write(" logins="+str(logins))
 
 boot()
