@@ -91,6 +91,9 @@ class command:
           loginsfile.seek(numworks)
           loginsfile.write("logins="+str(logins))
 
+  def exit():
+    return
+
 def login():
   global clog
   clog=input("user: ")
@@ -129,6 +132,8 @@ def runapp(commandtext):
       command.error(4)
   elif commandtext=='cls':
     command.cls()
+  elif commandtext=='exit':
+    command.exit()
   else:
     command.error(3)
 
