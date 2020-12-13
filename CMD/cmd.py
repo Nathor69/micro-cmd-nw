@@ -2,7 +2,7 @@ from math import *
 import os
 from data import *
 
-#Pycharm and NumWorks compatibility
+#PC and NumWorks compatibility
 #0 is false, 1 is true
 numworks=0
 
