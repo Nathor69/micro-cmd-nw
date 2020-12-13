@@ -18,6 +18,9 @@ Ver 0.0.1
   
 Please set your Python text size to small so the logo will print correctly
   
-Ideas for 0.0.2:  
+Ideas for 0.0.2:
 - TUI (don't know if that will be smooth on NW)
 - use "real" commands (not like python, but more like "sudo chmod etc", without "()")
+- option to add other root users
+- more software and stuff
+- etc...
