@@ -2,6 +2,10 @@ from math import *
 import os
 from data import *
 
+#Pycharm and NumWorks compatibility
+#0 is false, 1 is true
+numworks=0
+
 class command:
   def cls():
     print("\n"*10)
@@ -24,12 +28,11 @@ class command:
       print(i)
 
   def rdfl(fl):
-    file=open(fl)
-    file.seek(1)
-    print("###START OF "+fl+"###")
-    print(file.read())
-    print("####END OF "+fl+"####")
-    file.close
+    with open(fl) as file:
+      file.seek(numworks)
+      print("###START OF "+fl+"###")
+      print(file.read())
+      print("####END OF "+fl+"####")
 
   def error(err):
     if err==1:
@@ -39,6 +42,8 @@ class command:
       print("Cannot remove root user")
     if err==3:
       print("Command not found")
+    if err==4:
+      print("File not found")
 
   def addlog():
     if isroot==False:
@@ -56,7 +61,7 @@ class command:
       else:
         with open("data.py","w") as loginsfile:
           logins.append((nlog,npwd))
-          loginsfile.seek(1)
+          loginsfile.seek(numworks)
           loginsfile.write("logins="+str(logins))
 
   def remlog():
@@ -83,7 +88,7 @@ class command:
             if i[0]==rlog:
               logins.remove(i)
           loginsfile.truncate(0)
-          loginsfile.seek(1)
+          loginsfile.seek(numworks)
           loginsfile.write("logins="+str(logins))
 
 def login():
@@ -113,17 +118,23 @@ def commandinput():
 def runapp(commandtext):
   if commandtext=='dir':
     command.dir()
-  if commandtext=='addlog':
+  elif commandtext=='addlog':
     command.addlog()
-  if commandtext=='remlog':
+  elif commandtext=='remlog':
     command.remlog()
-  if commandtext=='rdfl':
-    command.rdfl(cinput[1])
-  if commandtext=='cls':
+  elif commandtext=='rdfl':
+    try:
+      command.rdfl(cinput[1])
+    except:
+      command.error(4)
+  elif commandtext=='cls':
     command.cls()
   else:
     command.error(3)
 
 command.boot()
 while True:
-  commandinput()
+  try:
+    commandinput()
+  except:
+    print("Please try again")

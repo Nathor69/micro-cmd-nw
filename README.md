@@ -6,16 +6,18 @@ Ver 0.0.1
   
 | Function             | What that does                    |
 |----------------------|-----------------------------------|
-| boot()               | Display a logo and launch login() |
-| login()              | Login "menu"                      |
-| dir()                | Display filenames                 |
-| rdfl("filename")     | Read a file                       |
-| addlog()             | Add a user                        |
-| remlog()             | Remove a user                     |
-| cls()                | Print some blank lines            |
-| error(int)           | Print an error                    |
+| `boot()`               | Display a logo and launch login() |
+| `login()`              | Login "menu"                      |
+| `dir()`                | Display filenames                 |
+| `rdfl("filename")`     | Read a file                       |
+| `addlog()`             | Add a user                        |
+| `remlog()`             | Remove a user                     |
+| `cls()`                | Print some blank lines            |
+| `error(int)`           | Print an error                    |
 | others are coming... | (°u°)                             |
   
+root user is `root` and pswd `hey`  
+change in `data.py` if you want  
 Please set your Python text size to small so the logo will print correctly
   
 Ideas for 0.0.2:

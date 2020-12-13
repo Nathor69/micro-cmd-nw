@@ -52,7 +52,7 @@ def rdfl(fl):
   print("###START OF "+fl+"###")
   print(file.read())
   print("####END OF "+fl+"####")
-  file.close
+  file.close()
 
 def error(err):
   if err==1:
