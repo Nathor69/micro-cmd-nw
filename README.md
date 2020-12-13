@@ -21,5 +21,6 @@ Please set your Python text size to small so the logo will print correctly (on N
 Ideas for 0.1.2:
 - TUI (don't know if that will be smooth on NW)
 - option to add other root users
+- encrypt passwords
 - more software and stuff
 - etc...
