@@ -33,5 +33,5 @@ Ideas for 0.1.2:
   - write in file
   - agenda
   - etc...
-- change database management (use a single varaiable for all data or use json/other)
+- change database management (use a single variable for all data or use json/other)
 - etc...
