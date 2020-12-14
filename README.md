@@ -29,6 +29,7 @@ Ideas for 0.1.2:
   - create file
   - rename file
   - remove file
+  - duplicate file
   - write in file
   - agenda
   - etc...
