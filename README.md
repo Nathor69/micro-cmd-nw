@@ -28,6 +28,7 @@ Ideas for 0.1.2:
 - more software and stuff:
   - create file
   - rename file
+  - remove file
   - write in file
   - agenda
   - etc...
