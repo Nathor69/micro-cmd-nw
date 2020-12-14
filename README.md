@@ -28,5 +28,5 @@ Ideas for 0.1.2:
   - rename file
   - agenda
   - etc...
-- change database management
+- change database management (use a single varaiable for all data or use json/other)
 - etc...
