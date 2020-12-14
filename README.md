@@ -22,10 +22,13 @@ Please set your Python text size to small so the logo will print correctly (on N
 Ideas for 0.1.2:
 - TUI (don't know if that will be smooth on NW)
 - option to add other root users
+- rename users
 - change passwords
 - encrypt passwords
 - more software and stuff:
+  - create file
   - rename file
+  - write in file
   - agenda
   - etc...
 - change database management (use a single varaiable for all data or use json/other)
