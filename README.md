@@ -33,5 +33,9 @@ Ideas for 0.1.3:
   - write in file
   - agenda
   - etc...
+- installer script
+  - choose between NW and PC version
+  - change root name and password
+  - etc...
 - change database management (use a single variable for all data or use json/other)
 - etc...
