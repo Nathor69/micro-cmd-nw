@@ -29,6 +29,7 @@ Ideas for 0.1.3:
 - option to add other root users
 - encrypt passwords
 - change passwords
+- Unix-like command names
 - more software and stuff:
   - write in file
   - agenda
