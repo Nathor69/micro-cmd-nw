@@ -23,7 +23,7 @@ Root user is `root` and pswd `hey`
 Change in `data.py` if you want  
 If running on pc, set `numworks` to `0` or `1` if running on NumWorks  
 Please set your Python text size to small so the logo will print correctly (on NumWorks)
-  
+
 Ideas:
 - TUI (don't know if that will be smooth on NW)
 - option to add other root users
