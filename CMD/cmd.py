@@ -1,6 +1,11 @@
-from math import *
-import os
-from data import *
+try :
+  import os
+except:
+  print("Please use Omega")
+try:
+  from data import *
+except:
+  print("Data file not found")
 
 #PC and NumWorks compatibility
 #0 is false, 1 is true
