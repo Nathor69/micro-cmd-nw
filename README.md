@@ -16,6 +16,10 @@ Ver 0.1.2
 | `rm src`                | Remove a file            |
 | `cp src dst`                | Duplicate a file            |
 | `sysinfo`                | Infos about the system            |
+| `pwegn`               | Password generator      |
+| `echo`                | Display/Write something |
+| `help`                  | List of the commands    |
+| `pwd`                     | Show directory path     |
 | `exit`                | Exit the CMD            |
 | others are coming... | (°u°)                             |
   

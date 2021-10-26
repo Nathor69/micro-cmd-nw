@@ -13,8 +13,7 @@ numworks = 0
 
 class command:
   def cls():
-    print("\n"*10)
-
+    print("\n"*14)
   def boot():
     print("""\n
    _____ __  __ _____     ___  __   ___  
@@ -35,18 +34,45 @@ class command:
         print(sysinfo[i])
       print("")
     login()
-
+  def echo():
+      echo1  = input("echo ")
+      print(echo1)
   def dir():
     ldir=os.listdir()
     for i in ldir:
       print(i)
-
   def rdfl(fl):
     with open(fl) as file:
       file.seek(numworks)
       print("###START OF "+fl+"###")
       print(file.read())
       print("####END OF "+fl+"####")
+  def help():
+    print("""
+dir                 | Display filenames
+pwgen               | Password generator
+cls                 | Display the directory
+rdfl filename       | Read a file
+addlog              | Add a user
+remlog              | Remove a user
+cls                 | Print some blank lines
+mkfile filename     | Create a file
+rename src dst      | Rename a file
+rm src              | Remove a file
+cp src dst          | Duplicate a file
+""")
+    help1 = input("More commands? Y//N ")
+    if help1=='Y':
+        print("""
+sysinfo             | Infos about the system
+pwd                 | Show directory path
+exit                | Exit the CMD
+echo                | Display/Write something
+help                | List of the commands
+others are coming...| (°u°)
+""")
+    else:
+        pass
 
   def error(err):
     if err==1:
@@ -58,7 +84,8 @@ class command:
       print("Command not found")
     if err==4:
       print("File not found")
-
+  def pwd():
+   print("C:\\")
   def addlog():
     if isroot==False:
       error(1)
@@ -77,7 +104,30 @@ class command:
           logins.append((nlog,npwd))
           loginsfile.seek(numworks)
           loginsfile.write("logins="+str(logins))
+  def telnetstarwars():
+      print("""\n
+      _                                      
+  ___| |_ __ _ _ __  
+ / __| __/ _` | '__| 
+ \__ \ || (_| | |   
+ |___/\__\__,_|_|    
+__      ____ _ _ __ ___ 
+\ \ /\ / / _` | '__/ __|
+ \ V  V / (_| | |  \__ \\
+  \_/\_/ \____|_|  |___/
 
+\n""")
+  def pwgen():
+    from random import *
+    import time
+    caractère = ("""ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&'()*+,-./:;<=>?@[\]
+    ^_`{|}~""").lower()
+    a = int(input("Number of characters in the password: "))
+    print("The password is:")
+    for i in range(a):
+      password = ""
+      cara = choice(caractère)
+      print(cara, end = '')
   def remlog():
     if isroot==False:
       error(1)
@@ -179,11 +229,10 @@ def login():
     login()
 
 def commandinput():
-  global cinput
-  cinput=input("nw@"+str(clog)+":~$ ")
-  cinput=cinput.split()
-  runapp(cinput[0])
-
+    global cinput
+    cinput=input("nw@"+str(clog)+":~$ ")
+    cinput=cinput.split()
+    runapp(cinput[0])
 def runapp(commandtext):
   if commandtext=='dir':
     command.dir()
@@ -211,6 +260,17 @@ def runapp(commandtext):
     command.cpfile(cinput[1],cinput[2])
   elif commandtext=='sysinfo':
     command.sysinfo()
+  elif commandtext=='help':
+    command.help()
+  elif commandtext=='pwd':
+    command.pwd()
+  elif commandtext=='pwgen':
+    command.pwgen()
+    print('\n')
+  elif commandtext=='Telnetstarwars':
+      command.telnetstarwars()
+  elif commandtext=='echo':
+      command.echo()
   else:
     command.error(3)
 
@@ -224,6 +284,3 @@ while True:
       break
   except:
     print("Error, please try again")
-
-
-#TODO: encrypt passwords, write in file, agenda, rename users, change passwords, change database management, add other root users
